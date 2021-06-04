@@ -1,0 +1,274 @@
+.top-header {
+  padding: 0 45px;
+  padding-top: 8px;
+  display: flex;
+  max-width: 1260px;
+  margin: 0 auto;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.top-header__search {
+  margin-right: auto;
+  position: relative;
+  max-width: 350px;
+}
+
+.top-header__search input {
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $black;
+  padding: 0;
+  padding-left: 29px;
+  cursor: pointer;
+
+  &::placeholder {
+  font-family: "Poppins", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $grey;
+  }
+
+  &:hover,
+  &:focus {
+    outline: 1px solid $grey;
+  }
+}
+
+.top-header__search label {
+  cursor: pointer;
+}
+
+.top-header__search svg {
+  position: absolute;
+  left: 0;
+  top: 7px;
+}
+
+.top-header__actions {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 400px;
+  margin-top: 2px;
+}
+
+.top-header__actions a {
+  color: $black;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  margin-left: 36px;
+
+  &:hover,
+  &:focus {
+    color: $grey;
+  }
+
+  &:active {
+    color: #393939;
+  }
+}
+
+.top-header__search input:hover + label svg {
+  fill: $grey;
+}
+
+.top-header__search input:focus + label svg {
+  fill: $black;
+}
+
+.top-header__actions svg {
+  display: none;
+}
+
+.top-header__actions span {
+  margin-left: 1px;
+}
+
+.top-header__cart {
+  stroke: #1d1613;
+}
+
+@media (max-width: $desktop-width) {
+  .top-header__actions {
+    order: -1;
+    width: 100%;
+    justify-content: flex-end;
+    max-width: none;
+  }
+
+  .top-header__actions a {
+    margin-left: 0;
+  }
+
+  .top-header__actions span {
+    display: none;
+  }
+
+  .top-header__login a {
+    display: none;
+  }
+
+  .top-header__actions svg {
+    display: block;
+  }
+
+  .top-header__search {
+    display: none;
+  }
+
+  .top-header__cart svg {
+    stroke: $black;
+  }
+
+  .top-header__cart {
+    position: absolute;
+    top: 10px;
+    right: 44px;
+    fill: none;
+  }
+
+  .top-header__cart a:hover svg,
+  .top-header__cart a:focus svg {
+    stroke: $grey;
+    border: none;
+  }
+
+  .top-header__cart a:active svg {
+    stroke: $black;
+  }
+
+  .top-header__cart a:focus  {
+    outline: none;
+  }
+
+  .header--opened .top-header__cart {
+    top: 54px;
+  }
+
+  .header--opened .top-header__cart svg {
+    stroke: $white;
+  }
+
+  .header--opened .top-header {
+    position: absolute;
+    width: 100%;
+    min-height: 778px;
+    background-color: $ginger;
+    top: 0;
+    padding-top: 0;
+    flex-direction: column;
+  }
+
+  .header--opened .top-header__actions {
+    order: 2;
+    justify-content: flex-start;
+  }
+
+  .header--opened .top-header__search {
+    display: block;
+    margin-top: 136px;
+    max-width: none;
+    width: 100%;
+  }
+
+  .header--opened .top-header__search input {
+    padding: 0;
+    padding-left: 40px;
+    width: 100%;
+    background-color: fade-out($white, 0.85);
+    border-radius: 21px;
+    height: 40px;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 2px solid $black;
+    }
+  }
+
+  .header--opened .top-header__search input:hover + label svg {
+    fill: $black;
+  }
+
+  .header--opened .top-header__search svg {
+    top: 12px;
+    left: 12px;
+    width: 16px;
+    height: 16px;
+    fill: $white;
+  }
+
+  .header--opened .top-header__login {
+    margin-top: 23px;
+    margin-bottom: 70px;
+  }
+
+  .header--opened .top-header__login a {
+    display: inline;
+
+    &:focus,
+    &:hover {
+      color: fade-out($black, 0.3);
+    }
+
+    &:active {
+      color: $black;
+    }
+  }
+
+  .header--opened .top-header__login a {
+    display: inline;
+    font-size: 18px;
+    line-height: 23px;
+    color: $white;
+  }
+
+  .header--no-js .top-header {
+    position: relative;
+    top: -44px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .top-header {
+    padding: 0 15px;
+  }
+
+  .top-header__cart {
+    right: 14px;
+    top: 2px;
+  }
+
+  .header--opened .top-header {
+    min-height: 684px;
+  }
+
+  .header--opened .top-header__search {
+    margin-top: 102px;
+  }
+
+  .header--opened .top-header__login {
+    margin-top: 12px;
+    margin-bottom: 25px;
+  }
+
+  .header--opened .top-header__cart {
+    top: 37px;
+  }
+
+  .header--no-js .top-header {
+    top: -35px;
+  }
+}
+
