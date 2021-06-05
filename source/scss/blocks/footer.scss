@@ -1,3 +1,30 @@
 .footer {
   margin-top: auto;
+  background-color: black;
+  margin-top: 130px;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1260px;
+  padding: 0 45px;
+  margin: 0 auto;
+  margin-bottom: 76px;
+}
+
+@media (max-width: $desktop-width) {
+  .footer__wrapper {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0 150px 0 45px;
+    margin-bottom: 37px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .footer__wrapper {
+    padding: 0 15px;
+    margin-bottom: 42px;
+  }
 }

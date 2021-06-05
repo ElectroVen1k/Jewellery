@@ -1,0 +1,43 @@
+.footer-conditions {
+  margin: 0;
+  margin-top: 93px;
+  padding: 0;
+  list-style: none;
+  margin-right: 10px;
+}
+
+.footer-conditions__item {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.footer-conditions__item a {
+  color: $white;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+}
+
+.footer-conditions__item svg {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  fill: $white;
+}
+
+.footer-conditions__item a:hover,
+.footer-conditions__item a:focus {
+  color: $grey;
+}
+
+.footer-conditions__item a:active {
+  color: fade-out($white, 0.1);
+}
+
+@media (max-width: $desktop-width) {
+  .footer-conditions {
+    margin-top: 43px;
+    margin-right: 86px;
+  }
+}
+

@@ -1,0 +1,86 @@
+.footer-social {
+  margin: 0;
+  margin-top: 93px;
+  padding: 0;
+  margin-left: 50px;
+  list-style: none;
+}
+
+.footer-social__item {
+  position: relative;
+  margin-bottom: 16px;
+  min-width: 115px;
+}
+
+.footer-social__item a {
+  color: $white;
+  padding-left: 30px;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+}
+
+.footer-social__item svg {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  fill: $white;
+}
+
+.footer-social__item a:hover,
+.footer-social__item a:focus {
+  color: $grey;
+}
+
+.footer-social__item a:hover > svg,
+.footer-social__item a:focus > svg {
+  fill: $grey;
+}
+
+.footer-social__item a:active > svg {
+  fill: fade-out($white, 0.1);
+}
+
+.footer-social__item a:active {
+  color: fade-out($white, 0.1);
+}
+
+@media (max-width: $desktop-width) {
+  .footer-social {
+    margin-top: 43px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .footer-social {
+    display: flex;
+    margin-left: 0;
+    margin-top: 27px;
+    width: 100%;
+  }
+
+  .footer-social__item {
+    min-width: 0;
+    margin-right: 30px;
+  }
+
+  .footer-social__item a {
+    padding-left: 0;
+  }
+
+  .footer-social__item svg {
+    width: 20px;
+    height: 21px;
+    position: static;
+  }
+
+  .footer-social__item--fb svg {
+    width: 12px;
+  }
+
+  .footer-social__item span {
+    display: none;
+  }
+}
+

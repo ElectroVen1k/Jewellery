@@ -1,0 +1,126 @@
+.mailing {
+  flex-grow: 2;
+  max-width: 500px;
+  margin-right: 35px;
+}
+
+.mailing h3 {
+  color: $white;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+  margin-top: 90px;
+  margin-bottom: 10px;
+}
+
+.mailing p {
+  color: $grey;
+  font-size: 16px;
+  line-height: 21px;
+  margin-bottom: 42px;
+  margin-top: 10px;
+}
+
+.mailing__form {
+  max-width: 500px;
+  border-bottom: 1px solid $white;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 7px;
+  width: 100%;
+}
+
+.mailing__form input {
+  background-color: transparent;
+  border: none;
+  color: $white;
+  flex-grow: 2;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  padding-left: 0;
+  font-family: "Poppins", "Arial", sans-serif;
+
+
+  &::placeholder {
+    color: $grey;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    vertical-align: middle;
+    font-family: "Poppins", "Arial", sans-serif;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: fade-out($white, 0.9);
+    border: none;
+    outline: none;
+  }
+}
+
+.mailing__form button {
+  background-color: transparent;
+  color: $white;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  border: none;
+  flex-shrink: 0;
+  cursor: pointer;
+  padding: 0;
+  font-family: "Poppins", "Arial", sans-serif;
+
+  &:hover,
+  &:focus {
+    color: $grey;
+  }
+
+  &:active {
+    color: fade-out($white, 0.1);
+  }
+}
+
+.mailing__form button:focus > svg,
+.mailing__form button:hover > svg {
+  stroke: $grey;
+}
+
+.mailing__form button:active > svg {
+  stroke: fade-out($white, 0.1);
+}
+
+.mailing__form svg {
+  margin-left: 8px;
+  stroke: $white;
+}
+
+@media (max-width: $desktop-width) {
+  .mailing {
+    width: 100%;
+    margin-right: 0;
+    max-width: none;
+  }
+
+  .mailing__form {
+    max-width: 559px;
+  }
+
+  .mailing h3 {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .mailing h3 {
+    margin-right: 45px;
+    margin-bottom: 13px;
+  }
+
+  .mailing p {
+    margin-right: 45px;
+  }
+}
