@@ -14,6 +14,10 @@
 }
 
 @media (max-width: $desktop-width) {
+  .footer {
+    margin-top: 80px;
+  }
+
   .footer__wrapper {
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -25,6 +29,9 @@
 @media (max-width: $tablet-width) {
   .footer__wrapper {
     padding: 0 15px;
-    margin-bottom: 42px;
+  }
+
+  .footer {
+    margin-top: 71px;
   }
 }

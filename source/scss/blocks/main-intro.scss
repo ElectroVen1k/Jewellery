@@ -1,8 +1,47 @@
 .main-intro {
   background-image: url('../../img/intro-main-desktop.png');
-  min-height: 500px;
+  min-height: 463px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 120px;
 }
 
 .main-intro p {
   margin: 0;
+  text-align: center;
+  color: $white;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.main-intro p:first-child {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 59px;
+  letter-spacing: 0.03em;
+  margin-top: -5px;
+  max-width: 500px;
+}
+
+.main-intro p:last-child {
+  font-style: italic;
+  font-size: 38px;
+  line-height: 39px;
+  max-width: 500px;
+}
+
+@media (max-width: $desktop-width) {
+  .main-intro {
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .main-intro {
+    margin-bottom: 60px;
+  }
 }

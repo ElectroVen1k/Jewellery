@@ -165,6 +165,8 @@
     top: 0;
     padding-top: 0;
     flex-direction: column;
+    z-index: 9;
+    overflow: scroll;
   }
 
   .header--opened .top-header__actions {

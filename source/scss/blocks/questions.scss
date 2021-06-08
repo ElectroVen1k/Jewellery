@@ -1,0 +1,149 @@
+.questions {
+  margin: 0 auto;
+  margin-top: 120px;
+  padding: 0 45px;
+}
+
+.questions__list {
+  margin: 0 auto;
+  margin-top: 47px;
+  padding: 0;
+  list-style: none;
+  max-width: 970px;
+}
+
+.questions__item {
+  border: 1px solid $ginger;
+  border-bottom: none;
+  padding-left: 42px;
+  position: relative;
+  min-height: 110px;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    background-color: fade-out($black, 0.9);
+  }
+}
+
+.questions__item:focus svg,
+.questions__item:hover svg  {
+  stroke: $coffee;
+}
+
+.questions__item br {
+  display: none;
+}
+
+.questions__item:last-child {
+  border-bottom: 1px solid $ginger;
+}
+
+.questions h2 {
+  text-align: center;
+  color: $black;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: 0.03em;
+}
+
+.questions__item p {
+  color: $black;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 500;
+  margin-top: 44px;
+  margin-bottom: 8px;
+}
+
+.questions__item span {
+  display: none;
+  font-size: 16px;
+  line-height: 21px;
+  max-width: 520px;
+  padding-bottom: 44px;
+}
+
+.questions__item--opened span {
+  display: block;
+}
+
+.questions__item--opened svg {
+  transform: rotate(180deg);
+}
+
+.questions__item svg {
+  stroke: $ginger;
+  fill: none;
+  position: absolute;
+  right: 48px;
+  top: 51px;
+}
+
+@media (max-width: $desktop-width) {
+  .questions {
+    margin-top: 70px;
+  }
+
+  .questions__item {
+    padding-left: 50px;
+  }
+
+  .questions__item p {
+    margin-bottom: 26px;
+  }
+
+  .questions__item span {
+    max-width: 530px;
+  }
+
+  .questions__item svg {
+    right: 48px;
+    top: 38px;
+    height: 36px;
+    width: 25px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .questions {
+    margin-top: 60px;
+    padding: 0 15px;
+  }
+
+  .questions__list {
+    margin-top: 28px;
+  }
+
+  .questions__item {
+    padding-left: 25px;
+    min-height: 83px;
+  }
+
+  .questions__item p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 16px;
+    margin-bottom: 14px;
+  }
+
+  .questions__item span {
+    font-size: 14px;
+    line-height: 20px;
+    padding-right: 55px;
+    padding-bottom: 19px;
+  }
+
+  .questions__item br {
+    display: block;
+  }
+
+  .questions__item svg {
+    right: 22px;
+    top: 13px;
+    height: 30px;
+    width: 24px;
+  }
+}
