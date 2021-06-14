@@ -8,6 +8,7 @@
     headerElement.classList.remove('header--opened');
     headerElement.classList.remove('header--no-js');
     closeAllAnswers();
+    closeFilterOnLoad();
   };
 
   var openMenu = function () {
@@ -74,5 +75,68 @@
     block.addEventListener('click', questionsToggle(block));
     block.addEventListener('keydown', onQuestionsBlockPressEnter(block));
   }
+
+  // Filter
+  var filterForm = document.querySelector('.filter');
+  var filterOpenButton = document.querySelector('.filter__open-button');
+  var filterCloseButton = document.querySelector('.filter__button--close');
+  var filterBlocks = document.querySelectorAll('.filter__block');
+  var filterTitles = document.querySelectorAll('.filter__block p');
+
+  var openBlock = function (block) {
+    block.classList.add('filter__block--opened');
+  }
+
+  var closeBlock = function (block) {
+    block.classList.remove('filter__block--opened');
+  }
+
+  var filterBlockToggle = function (title) {
+    title.addEventListener('click', function () {
+      if (title.parentElement.classList.contains('filter__block--opened')) {
+        closeBlock(title.parentElement);
+      } else {
+        openBlock(title.parentElement);
+      }
+    });
+  }
+
+  var onFilterBlockPressEnter = function (block) {
+    return function (evt) {
+      if (evt.key === 'Enter') {
+        if (evt.target === this) {
+          if (block.classList.contains('filter__block--opened')) {
+            closeBlock(block);
+          } else {
+            openBlock(block);
+          }
+        }
+      }
+    }
+  };
+
+  for (var block of filterBlocks) {
+    block.addEventListener('keydown', onFilterBlockPressEnter(block));
+  }
+
+  for (var title of filterTitles) {
+    title.addEventListener('click', filterBlockToggle(title));
+  }
+
+  var openFilterForm = function () {
+    filterForm.classList.add('filter--opened');
+  }
+
+  var closeFilterForm = function () {
+    filterForm.classList.remove('filter--opened');
+  }
+
+  var closeFilterOnLoad = function () {
+    filterForm.classList.remove('filter--opened');
+    filterForm.classList.remove('filter--no-js');
+  }
+
+  filterOpenButton.addEventListener('click', openFilterForm);
+  filterCloseButton.addEventListener('click', closeFilterForm);
 
 }());

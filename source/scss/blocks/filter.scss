@@ -1,0 +1,356 @@
+.filter form {
+  width: 250px;
+}
+
+.filter__block {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $ginger;
+  border-bottom: none;
+  padding: 0 24px;
+  margin: 0;
+  min-height: 67px;
+  position: relative;
+}
+
+.filter__block p {
+  margin-top: 25px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $black;
+  cursor: pointer;
+
+  &:hover {
+    color: fade-out($black, 0.3);
+  }
+}
+
+.filter__block p:hover svg {
+  stroke: $coffee;
+}
+
+.filter__block:focus p {
+  color: fade-out($black, 0.2);
+}
+
+.filter__block:focus svg {
+  stroke: $coffee;
+}
+
+.filter__block:last-child {
+  border-bottom: 1px solid $ginger;
+}
+
+.filter__block label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 35px;
+}
+
+.filter__block svg {
+  position: absolute;
+  fill: none;
+  stroke: $ginger;
+  top: 28px;
+  right: 23px;
+  cursor: pointer;
+}
+
+.filter__block--opened svg {
+  transform: rotate(180deg);
+}
+
+.filter__item {
+  display: none;
+  margin-bottom: 4px;
+}
+
+.filter__block--opened .filter__item {
+  display: block;
+}
+
+.filter__item:last-child {
+  margin-bottom: 25px;
+}
+
+.filter__item label {
+  position: relative;
+  cursor: pointer;
+}
+
+.filter__item input + label::before {
+  content: "";
+  background-color: transparent;
+  border: 1px solid $ginger;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 3px;
+  left: 10px;
+}
+
+.filter__item input:checked + label::before {
+  background-color: $ginger;
+}
+
+.filter__item input:focus + label {
+  color: fade-out($black , 0.5);
+  outline: 1px solid black;
+}
+
+.filter__item input:focus + label::before {
+  border: 1px solid $coffee;
+}
+
+.filter__item input:focus:checked + label::before {
+  background-color: $coffee;
+}
+
+.filter__item label:hover {
+  color: fade-out($black , 0.4);
+
+  &::before {
+    border: 1px solid $coffee;
+  }
+}
+
+.filter__item input:checked + label:hover::before {
+  background-color: $coffee;
+}
+
+.filter__item input:focus:checked + label::before {
+  background-color: $coffee;
+}
+
+.filter__button button {
+  min-height: 68px;
+  width: 100%;
+  border: 1px solid $ginger;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+.filter__button--apply button {
+  margin-top: 35px;
+  margin-bottom: 12px;
+  color: $white;
+  background-color: $ginger;
+
+  &:hover,
+  &:focus {
+    background-color: $coffee;
+  }
+}
+
+.filter__button--clear button {
+  margin-top: 13px;
+  margin-bottom: 25px;
+  color: $black;
+  background-color: $white;
+
+  &:hover,
+  &:focus {
+    background-color: fade-out($black, 0.8);
+  }
+}
+
+.filter__button--close {
+  display: none;
+}
+
+.filter__open-button {
+  display: none;
+}
+
+@media (max-width: $desktop-width) {
+  .filter {
+    width: 100%;
+  }
+
+  .filter form {
+    display: none;
+  }
+
+  .filter__open-button {
+    display: block;
+  }
+
+  .filter__open-button {
+    display: block;
+    width: 100%;
+    min-height: 68px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: $white;
+    background-color: $ginger;
+    border: none;
+    margin-bottom: 50px;
+  }
+
+  .filter--opened form {
+    display: block;
+    box-shadow: 0px 5px 32px rgba(219, 213, 208, 0.24);
+    width: 423px;
+    margin-top: 27px;
+    position: relative;
+  }
+
+  .filter--opened .filter__form-container {
+    width: 100%;
+    min-height: 957px;
+    background-color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    background-color: $white;
+  }
+
+  .filter__block {
+    border: none;
+    border-bottom: 1px solid $ginger;
+    padding: 0 22px;
+    padding-bottom: 13px;
+  }
+
+  .filter__block p {
+    font-size: 18px;
+    line-height: 23px;
+    margin-top: 34px;
+    margin-bottom: 21px;
+  }
+
+  .filter__block svg {
+    width: 25px;
+    height: 25px;
+    top: 34px;
+    right: 39px;
+  }
+
+  .filter__item {
+    margin-bottom: 12px;
+  }
+
+  .filter__item:last-child {
+    margin-bottom: 22px;
+  }
+
+  .filter__item label {
+    font-size: 16px;
+    line-height: 21px;
+    padding-left: 39px;
+  }
+
+  .filter__button {
+    margin-left: 21px;
+    margin-right: 40px;
+  }
+
+  .filter__button--apply button {
+    margin-top: 40px;
+  }
+
+  .filter__button--clear button {
+    margin-bottom: 40px;
+  }
+
+  .filter__button--close {
+    display: block;
+    position: absolute;
+    top: -16px;
+    right: -56px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .filter__button--close button {
+    width: 32px;
+    height: 32px;
+    min-height: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .filter__button--close svg {
+    fill: $black;
+  }
+
+  .filter__button--close button:hover svg,
+  .filter__button--close button:focus svg {
+    fill: fade-out($black, 0.5);
+  }
+
+  .filter__item input + label::before {
+    width: 18px;
+    height: 18px;
+    top: 2px;
+    left: 9px;
+  }
+
+  .filter--no-js form {
+    position: static;
+    display: block;
+  }
+
+  .filter--no-js .filter__form-container{
+    position: static;
+  }
+
+  .filter--no-js .filter__open-button {
+    display: none;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .filter__open-button {
+    margin-bottom: 40px;
+  }
+
+  .filter form {
+    margin: 0 auto;
+    width: 270px;
+    margin-top: 76px;
+  }
+
+  .filter__block {
+    padding-bottom: 3px;
+  }
+
+  .filter__block p {
+    margin-top: 26px;
+    margin-bottom: 19px;
+  }
+
+  .filter__block svg {
+    width: 24px;
+    height: 17px;
+    top: 28px;
+    right: 18px;
+  }
+
+  .filter__button {
+    margin: 0 20px;
+  }
+
+  .filter__button--apply button {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .filter__button--clear button {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  .filter__button--close {
+    margin: 0;
+    right: -10px;
+  }
+}

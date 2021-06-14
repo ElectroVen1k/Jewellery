@@ -1,0 +1,51 @@
+.cataloge-intro {
+  background-image: url('../../img/intro-main-desktop.png');
+  min-height: 261px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+.cataloge-intro p {
+  margin: 0;
+  text-align: center;
+  color: $white;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.cataloge-intro p:first-child {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  margin-top: -5px;
+  max-width: 500px;
+}
+
+.cataloge-intro p:last-child {
+  font-style: italic;
+  font-size: 22px;
+  line-height: 29px;
+  max-width: 500px;
+  font-weight: 500;
+}
+
+@media (max-width: $desktop-width) {
+  .cataloge-intro {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .cataloge-intro {
+    margin-bottom: 40px;
+  }
+
+  .cataloge-intro p:last-child {
+    padding:  0 25px;
+  }
+}

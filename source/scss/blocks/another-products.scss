@@ -1,0 +1,250 @@
+.another-products {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 123px;
+  max-width: 1260px;
+  padding: 0 45px;
+  position: relative;
+}
+
+.another-products h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  line-height: 44px;
+  text-align: center;
+  margin-bottom: 19px;
+  color: $black;
+}
+.another-products a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  border-bottom: 1px solid $ginger;
+  width: max-content;
+  margin: 0 auto;
+  display: block;
+  text-decoration: none;
+  color: $black;
+  cursor: pointer;
+  padding-bottom: 5px;
+
+  &:focus,
+  &:hover {
+    color: fade-out($black, 0.3);
+    border-bottom: 1px solid $coffee;
+    outline-offset: 3px;
+  }
+}
+
+.another-products__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  margin-top: 59px;
+  overflow: hidden;
+}
+
+.another-products__item {
+  width: calc(25% - 22.5px);
+  flex-shrink: 0;
+}
+
+.another-products__item img {
+  object-fit: cover;
+  height: 284px;
+  width: 100%;
+  display: block;
+}
+
+.another-products__item + .another-products__item {
+  margin-left: 30px;
+}
+
+.another-products__description {
+  text-align: center;
+}
+
+.another-products__description p {
+  margin: 0 auto;
+  margin-top: 21px;
+  margin-bottom: 1px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  width: max-content;
+  color: $black;
+}
+
+.another-products__description span {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: $black;
+}
+
+.another-products__slider-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  top: 43px;
+  cursor: pointer;
+}
+
+.another-products__slider-button svg {
+  stroke: $ginger;
+  width: 29px;
+  height: 13px;
+}
+
+.another-products__slider-button:hover svg,
+.another-products__slider-button:focus svg {
+  stroke: $coffee;
+}
+
+.another-products__slider-button--previous {
+  transform: rotate(180deg);
+  position: absolute;
+  left: 44px;
+}
+
+.another-products__slider-button--next {
+  position: absolute;
+  right: 44px;
+}
+
+.another-products__slider-pages {
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 46px;
+  list-style: none;
+  display: flex;
+  width: max-content;
+}
+
+.another-products__slider-pages--mobile {
+  display: none;
+}
+
+.another-products__slider-item:nth-child(n+4) {
+  display: none;
+}
+
+.another-products__slider-item button {
+  background-color: transparent;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  border: none;
+  font-size: 16px;
+  line-height: 21px;
+  color: $grey;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    color: fade-out($black, 0.2);
+  }
+}
+
+.another-products__slider-item--active button {
+  color: $black;
+}
+
+@media (max-width: $desktop-width) {
+  .another-products {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .another-products h2 {
+    margin-bottom: 19px;
+  }
+
+  .another-products a {
+    padding-bottom: 4px;
+  }
+
+  .another-products__list {
+    margin: 0 auto;
+    margin-top: 50px;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      color: transparent;
+    }
+  }
+
+  .another-products__item {
+    width: calc(50% - 15px);
+  }
+
+  .another-products__item img {
+    height: 340px;
+  }
+
+  .another-products__description p {
+    padding-bottom: 0;
+    margin-bottom: 1px;
+  }
+
+  .another-products__slider-pages {
+    margin-top: 19px;
+  }
+
+  .another-products__slider-item:nth-child(n+4) {
+    display: block;
+  }
+
+  .another-products__slider-button svg {
+    width: 37px;
+    height: 17px;
+  }
+
+  .another-products__slider-button {
+    top: 41px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .another-products {
+    padding: 0 15px;
+  }
+
+  .another-products__list {
+    margin-top: 40px;
+    max-width: 350px;
+  }
+
+  .another-products__slider-button {
+    display: none;
+  }
+
+  .another-products__item img {
+    height: 136px;
+  }
+
+  .another-products__description p {
+    width: auto;
+    margin-top: 16px;
+  }
+
+  .another-products__slider-pages {
+    display: none;
+  }
+
+  .another-products__slider-pages--mobile {
+    display: block;
+    margin-top: -7px;
+  }
+
+  .another-products__slider-pages--mobile p {
+    white-space: pre;
+    border: none;
+  }
+}
+

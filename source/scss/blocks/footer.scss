@@ -1,7 +1,6 @@
 .footer {
   margin-top: auto;
   background-color: black;
-  margin-top: 130px;
 }
 
 .footer__wrapper {
@@ -10,14 +9,10 @@
   max-width: 1260px;
   padding: 0 45px;
   margin: 0 auto;
-  margin-bottom: 76px;
+  margin-bottom: 52px;
 }
 
 @media (max-width: $desktop-width) {
-  .footer {
-    margin-top: 80px;
-  }
-
   .footer__wrapper {
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -29,9 +24,5 @@
 @media (max-width: $tablet-width) {
   .footer__wrapper {
     padding: 0 15px;
-  }
-
-  .footer {
-    margin-top: 71px;
   }
 }
