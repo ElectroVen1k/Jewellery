@@ -1915,6 +1915,9 @@ a {
   display: block;
   height: 100%; }
 
+.product__puctures-list p {
+  display: none; }
+
 .product__info {
   flex-grow: 2;
   margin: 0 20px; }
@@ -1940,7 +1943,8 @@ a {
 .product__info-sections {
   margin-top: 35px;
   margin-bottom: 30px;
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
 
 .product__info-sections a {
   color: #9b9997;
@@ -1961,11 +1965,26 @@ a {
   line-height: 18px;
   margin-top: 30px; }
 
+.product__additical-info-item {
+  position: relative;
+  margin-bottom: 12px;
+  display: grid;
+  grid-template-columns: auto auto; }
+  .product__additical-info-item::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #f6f5f4;
+    position: absolute;
+    bottom: 0; }
+
 .product__additical-info dt {
   float: left;
   margin-right: auto;
   width: 50%;
-  font-weight: 500; }
+  font-weight: 500;
+  padding-bottom: 10px;
+  display: block; }
 
 .product__additical-info dd {
   width: 100%;
@@ -1973,16 +1992,7 @@ a {
   margin-left: auto;
   position: relative;
   padding-bottom: 10px;
-  margin-bottom: 12px;
   display: block; }
-  .product__additical-info dd::after {
-    content: '';
-    width: 100%;
-    height: 1px;
-    background-color: #F6F5F4;
-    position: absolute;
-    left: 0;
-    bottom: 0; }
 
 .product__info button {
   width: 100%;
@@ -2003,7 +2013,8 @@ a {
 
 .product__purchase-terms {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-left: 5px; }
 
 .product__purchase-terms p {
   color: #9b9997;
@@ -2011,11 +2022,94 @@ a {
   line-height: 18px;
   font-weight: 500;
   text-align: center;
-  margin-bottom: 3px; }
+  margin-bottom: 3px;
+  position: relative; }
 
-.product__purchase-terms p:not(:first-child) {
-  padding-left: 13px;
-  border-left: 1px solid #F6F5F4; }
+.product__purchase-terms p:not(:nth-child(3n+1))::before {
+  content: "";
+  height: 20px;
+  width: 1px;
+  position: absolute;
+  top: 0;
+  left: -14px;
+  background-color: #F6F5F4; }
+
+@media (max-width: 1023px) {
+  .product {
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    max-width: 770px; }
+  .product__puctures-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 286px 129px;
+    width: 319px;
+    margin-right: 20px;
+    -moz-column-gap: 14px;
+         column-gap: 14px;
+    row-gap: 14px; }
+  .product__pictures-item--primary {
+    grid-column: 1/4;
+    grid-row: 1/2; }
+  .product__info {
+    max-width: 319px;
+    margin: 0;
+    margin-left: 20px; }
+  .product__info-wrapper {
+    margin: 0; }
+  .product__purchase-terms {
+    margin-left: 0; }
+  .product__purchase-terms p {
+    font-size: 12px;
+    line-height: 16px; } }
+
+@media (max-width: 767px) {
+  .product {
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 320px;
+    margin-bottom: 53px; }
+  .product__puctures-list {
+    display: flex;
+    max-width: 290px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    position: relative; }
+  .product__puctures-list p {
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500; }
+  .product__pictures-item {
+    width: 290px;
+    height: 260px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    flex-shrink: 0; }
+  .product__pictures-item img {
+    width: 100%; }
+  .product__info {
+    margin-left: 0; }
+  .product__info-sections {
+    margin-top: 25px; }
+  .product span {
+    margin-bottom: 25px; }
+  .product__info button {
+    margin-top: 26px; }
+  .product__purchase-terms {
+    margin: 0 5px; }
+  .product__purchase-terms p {
+    margin-top: 9px;
+    max-width: 60px; }
+  .product__purchase-terms p:not(:nth-child(3n+1))::before {
+    left: -28px; } }
 
 .another-products {
   margin: 0 auto;
@@ -2159,7 +2253,8 @@ a {
 @media (max-width: 1023px) {
   .another-products {
     max-width: 768px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-bottom: 72px; }
   .another-products h2 {
     margin-bottom: 19px; }
   .another-products a {
@@ -2189,7 +2284,8 @@ a {
 
 @media (max-width: 767px) {
   .another-products {
-    padding: 0 15px; }
+    padding: 0 15px;
+    margin-bottom: 61px; }
   .another-products__list {
     margin-top: 40px;
     max-width: 350px; }

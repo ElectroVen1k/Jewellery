@@ -159,6 +159,7 @@
   .another-products {
     max-width: 768px;
     margin: 0 auto;
+    margin-bottom: 72px;
   }
 
   .another-products h2 {
@@ -213,6 +214,7 @@
 @media (max-width: $tablet-width) {
   .another-products {
     padding: 0 15px;
+    margin-bottom: 61px;
   }
 
   .another-products__list {
