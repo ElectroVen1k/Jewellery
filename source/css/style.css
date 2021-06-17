@@ -99,10 +99,25 @@ a {
 .body {
   min-height: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  position: relative;
+  scroll-behavior: smooth; }
 
 .body--noscroll {
   overflow: hidden; }
+
+.body__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(29, 22, 19, 0.25);
+  z-index: 20;
+  display: none; }
+
+.body__overlay--opened {
+  display: block; }
 
 .header {
   padding-top: 29px;
@@ -2304,5 +2319,378 @@ a {
   .another-products__slider-pages--mobile p {
     white-space: pre;
     border: none; } }
+
+.modal-card {
+  position: absolute;
+  top: 372px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  min-height: 439px;
+  background-color: #ffffff;
+  z-index: 25;
+  padding: 0 35px 55px;
+  box-shadow: 0px 4px 32px rgba(121, 121, 121, 0.24);
+  display: none; }
+
+.modal-card--opened {
+  display: block; }
+
+.modal-card h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 47px;
+  margin-bottom: 46px; }
+
+.modal-card__added-item {
+  display: flex;
+  margin-bottom: 39px; }
+
+.modal-card__added-item img {
+  width: 84px;
+  height: 79px;
+  flex-shrink: 0;
+  display: block;
+  margin-right: 20px; }
+
+.modal-card__added-item p {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  margin-top: -4px;
+  margin-bottom: 0; }
+
+.modal-card__added-item span {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin-top: 7px;
+  margin-bottom: 10px; }
+
+.modal-card__counter {
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; }
+
+.modal-card__counter-button {
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background-color: transparent;
+  border: none; }
+
+.modal-card__counter-button--plus {
+  top: -4px;
+  right: -2px; }
+  .modal-card__counter-button--plus::after, .modal-card__counter-button--plus::before {
+    content: "";
+    width: 14px;
+    height: 2px;
+    background-color: #9b9997;
+    position: absolute;
+    top: 6px;
+    left: 0px; }
+  .modal-card__counter-button--plus::after {
+    transform: rotate(90deg); }
+
+.modal-card__counter-button--minus {
+  top: -9px;
+  right: -2px; }
+  .modal-card__counter-button--minus::before {
+    content: "";
+    width: 14px;
+    height: 2px;
+    background-color: #9b9997;
+    position: absolute;
+    top: 6px;
+    left: 0px; }
+
+.modal-card__counter p {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  position: relative;
+  left: 6px;
+  bottom: 2px; }
+
+.modal-card__additical-info {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 17px;
+  position: relative; }
+  .modal-card__additical-info::after {
+    content: "";
+    width: 500px;
+    height: 1px;
+    background-color: #F6F5F4;
+    position: absolute;
+    left: -35px;
+    top: 0; }
+
+.modal-card__additical-info p {
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 0; }
+
+.modal-card__additical-info p:last-child {
+  font-weight: 500; }
+
+.modal-card__action {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px; }
+
+.modal-card__action a {
+  width: 200px;
+  min-height: 68px;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #a87b62;
+  color: #1d1613; }
+
+.modal-card__action a:last-child {
+  color: #ffffff;
+  background-color: #a87b62; }
+
+.modal-card__close {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background-color: transparent; }
+  .modal-card__close::after, .modal-card__close::before {
+    content: "";
+    width: 18px;
+    height: 2px;
+    background-color: #1d1613;
+    position: absolute;
+    top: 6px;
+    left: -1px; }
+  .modal-card__close::after {
+    transform: rotate(45deg); }
+  .modal-card__close::before {
+    transform: rotate(-45deg); }
+
+@media (max-width: 1023px) {
+  .modal-card {
+    top: 258px;
+    width: 502px;
+    padding: 0 30px 55px; }
+  .modal-card__added-item img {
+    width: 88px; }
+  .modal-card__counter {
+    position: relative;
+    top: 4px;
+    right: 2px; }
+  .modal-card__action a {
+    width: 206px; }
+  .modal-card__additical-info::after {
+    width: 502px;
+    left: -30px; } }
+
+@media (max-width: 767px) {
+  .modal-card {
+    width: 290px;
+    padding: 0 15px 25px;
+    top: 117px; }
+  .modal-card h4 {
+    margin: 0 30px;
+    margin-top: 38px;
+    margin-bottom: 33px;
+    font-size: 24px;
+    line-height: 29px; }
+  .modal-card__added-item {
+    margin-bottom: 29px; }
+  .modal-card__added-item img {
+    width: 70px;
+    height: 63px;
+    margin-right: 15px; }
+  .modal-card__added-item p {
+    font-size: 16px;
+    line-height: 21px; }
+  .modal-card__added-item span {
+    margin-top: 5px; }
+  .modal-card__counter p {
+    bottom: -4px; }
+  .modal-card__counter-button--minus {
+    top: 1px; }
+  .modal-card__additical-info {
+    flex-direction: column;
+    padding-top: 22px; }
+    .modal-card__additical-info::after {
+      width: 290px;
+      left: -15px; }
+  .modal-card__additical-info p {
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 0;
+    margin-bottom: 12px; }
+  .modal-card__action {
+    flex-wrap: wrap;
+    margin-top: 19px; }
+  .modal-card__action a {
+    width: 100%;
+    margin-bottom: 20px; }
+  .modal-card__close {
+    top: 15px;
+    right: 15px; } }
+
+.login-popup {
+  position: fixed;
+  margin: auto;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 430px;
+  min-height: 586px;
+  z-index: 30;
+  background-color: #f0eae4;
+  background-image: url("../../img/sweet-ice-cream-photography1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 442px 138px;
+  background-position: top center;
+  padding: 138px 45px 0; }
+
+.login-popup h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  line-height: 44px;
+  font-weight: 700;
+  text-align: center;
+  color: #1d1613;
+  margin-top: 50px;
+  margin-bottom: 29px; }
+
+.login-popup input {
+  width: 100%;
+  background-color: transparent;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #1d1613;
+  border: none;
+  border-bottom: 1px solid #1d1613;
+  padding-bottom: 8px;
+  padding-left: 0;
+  margin-bottom: 31px; }
+  .login-popup input::-moz-placeholder {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #1d1613; }
+  .login-popup input::placeholder {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #1d1613; }
+
+.login-popup input:last-of-type {
+  margin-bottom: 5px; }
+
+.login-popup form a {
+  display: block;
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: auto;
+  color: #9b9997;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500; }
+
+.login-popup form button {
+  width: 100%;
+  min-height: 68px;
+  background-color: #a87b62;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  border: none;
+  margin-top: 45px; }
+
+.login-popup p {
+  margin: 0;
+  color: #9b9997;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+.login-popup a {
+  color: #1d1613; }
+
+.login-popup__close {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background-color: transparent; }
+  .login-popup__close::after, .login-popup__close::before {
+    content: "";
+    width: 18px;
+    height: 2px;
+    background-color: #1d1613;
+    position: absolute;
+    top: 6px;
+    left: -1px; }
+  .login-popup__close::after {
+    transform: rotate(45deg); }
+  .login-popup__close::before {
+    transform: rotate(-45deg); }
+
+@media (max-width: 1023px) {
+  .login-popup {
+    width: 442px;
+    padding: 138px 51px 0; }
+  .login-popup__close {
+    width: 20px;
+    height: 20px;
+    top: 23px;
+    right: 21px; }
+    .login-popup__close::before, .login-popup__close::after {
+      width: 24px; } }
+
+@media (max-width: 767px) {
+  .login-popup {
+    width: 270px;
+    padding: 84px 15px 0;
+    background-size: 270px 84px;
+    min-height: 470px; }
+  .login-popup h4 {
+    font-size: 24px;
+    line-height: 31px;
+    margin-top: 37px;
+    margin-bottom: 23px; }
+  .login-popup input {
+    margin-bottom: 26px; }
+  .login-popup form button {
+    margin-top: 35px; }
+  .login-popup__close {
+    width: 15px;
+    height: 15px;
+    top: 15px;
+    right: 15px; }
+    .login-popup__close::before, .login-popup__close::after {
+      width: 18px; } }
 
 /*# sourceMappingURL=style.css.map */

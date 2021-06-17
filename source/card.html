@@ -414,6 +414,47 @@
         </ul>
       </div>
     </footer>
+    <div class="modal-card">
+      <h4>The item was added to your cart</h4>
+      <div class="modal-card__added-item">
+        <picture>
+          <source type="image/webp" srcset="">
+          <img src="img/necklace-detail1x.jpg" srcset="img/necklace-detail2x.jpg 2x" alt="">
+        </picture>
+        <p>Gold Necklace
+          <span>$ 115</span>
+        </p>
+        <div class="modal-card__counter">
+          <button type="button" class="modal-card__counter-button modal-card__counter-button--plus"></button>
+          <p>1</p>
+          <button type="button" class="modal-card__counter-button modal-card__counter-button--minus"></button>
+        </div>
+      </div>
+      <div class="modal-card__additical-info">
+        <p>You have 1 item in the cart</p>
+        <p>Cart subtotal: $ 115</p>
+      </div>
+      <div class="modal-card__action">
+        <a href="cataloge.html">Continue shopping</a>
+        <a href="cart.html">Checkout</a>
+      </div>
+      <button class="modal-card__close" type="button"></button>
+    </div>
+    <div class="login-popup">
+      <h4>Log In</h4>
+      <form method="post" action="https://echo.htmlacademy.ru/">
+        <input id="email" type="text" name="E-mail" placeholder="Your E-mail">
+        <label for="email" class="visually-hidden"></label>
+        <input id="password" type="password" name="password" placeholder="Password">
+        <label for="password" class="visually-hidden"></label>
+        <a href="#">Forgot your password?</a>
+        <button type="submit">Log In</button>
+      </form>
+      <p>Don’t have an account?<a href="#">&#8194;Sign Up</a>
+      </p>
+      <button class="login-popup__close" type="button"></button>
+    </div>
+    <div class="body__overlay  body__overlay--opened"></div>
     <script src="js/main.js"></script>
   </body>
 </html>

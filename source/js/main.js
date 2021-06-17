@@ -8,7 +8,7 @@
     headerElement.classList.remove('header--opened');
     headerElement.classList.remove('header--no-js');
     closeAllAnswers();
-    closeFilterOnLoad();
+    // closeFilterOnLoad();
   };
 
   var openMenu = function () {
@@ -138,5 +138,39 @@
 
   filterOpenButton.addEventListener('click', openFilterForm);
   filterCloseButton.addEventListener('click', closeFilterForm);
+
+  // Modal card
+
+  var modalCard = document.querySelector('.modal-card');
+  var openModalCardButton = document.querySelector('.product__info button');
+  var closeModalCardButton = document.querySelector('.modal-card__close');
+  var overlay = document.querySelector('.body__overlay');
+
+  var openModalCard = function () {
+    modalCard.classList.add('modal-card--opened');
+    overlay.classList.add('body__overlay--opened');
+    body.classList.add('body--noscroll');
+    closeModalCardButton.addEventListener('click', closeModalCard);
+    overlay.addEventListener('click', closeModalCard);
+    document.addEventListener('keydown', onEscPress);
+  }
+
+  var closeModalCard = function () {
+    modalCard.classList.remove('modal-card--opened');
+    overlay.classList.remove('body__overlay--opened');
+    closeModalCardButton.removeEventListener('click', closeModalCard);
+    overlay.removeEventListener('click', closeModalCard);
+    body.classList.remove('body--noscroll');
+    document.removeEventListener('keydown', onEscPress);
+  }
+
+  var onEscPress = function (evt) {
+    if (evt.key === 'Escape') {
+      closeModalCard();
+    }
+  }
+
+  openModalCardButton.addEventListener('click', openModalCard);
+
 
 }());
