@@ -805,7 +805,10 @@ a {
 
 .new__item {
   width: calc(25% - 22.5px);
-  flex-shrink: 0; }
+  flex-shrink: 0;
+  position: relative;
+  left: 0;
+  transition: all 0.3s ease-out; }
 
 .new__item img {
   -o-object-fit: cover;
@@ -908,10 +911,7 @@ a {
     padding-bottom: 4px; }
   .new__list {
     margin: 0 auto;
-    margin-top: 50px;
-    overflow-x: scroll; }
-    .new__list::-webkit-scrollbar {
-      color: transparent; }
+    margin-top: 50px; }
   .new__item {
     width: calc(50% - 15px); }
   .new__item img {
