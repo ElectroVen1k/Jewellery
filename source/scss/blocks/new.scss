@@ -47,6 +47,9 @@
 .new__item {
   width: calc(25% - 22.5px);
   flex-shrink: 0;
+  position: relative;
+  left: 0;
+  transition: all 0.3s ease-out
 }
 
 .new__item img {
@@ -170,11 +173,6 @@
   .new__list {
     margin: 0 auto;
     margin-top: 50px;
-    overflow-x: scroll;
-
-    &::-webkit-scrollbar {
-      color: transparent;
-    }
   }
 
   .new__item {

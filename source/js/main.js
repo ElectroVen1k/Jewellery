@@ -173,4 +173,111 @@
   openModalCardButton.addEventListener('click', openModalCard);
 
 
+  //Slider
+
+  var slider = document.querySelector('.new__list');
+  var sliderItems = document.querySelectorAll('.new__item');
+  var sliderPadeItems = document.querySelectorAll('.new__slider-item');
+  var previousSlideButton = document.querySelector('.new__slider-button--previous');
+  var nextSlideButton = document.querySelector('.new__slider-button--next');
+  var mobilePageSliderCounter = document.querySelector('.new__slider-pages--mobile span')
+
+  var currentSlideIndex = 0;
+  var lastSlideIndex = 0;
+  var sliderGap = 30;
+  var percentSymbol = '% - '
+  var slidesCount;
+
+  var windowDesktopSize = window.matchMedia('(min-width: 1024px)');
+  var windowTabletSize = window.matchMedia('(min-width: 768px)');
+
+
+  var enableSlider = function () {
+    if (windowDesktopSize.matches) {
+      slidesCount = 3;
+      nextSlideButton.addEventListener('click', toNextSlide);
+      previousSlideButton.addEventListener('click', toPreviousSlide);
+      sliderPageButtons();
+    } else if (windowTabletSize.matches) {
+      slidesCount = 6;
+      nextSlideButton.addEventListener('click', toNextSlide);
+      previousSlideButton.addEventListener('click', toPreviousSlide);
+      sliderPageButtons();
+      swipeSlider();
+    } else {
+      slidesCount = 6;
+      swipeSlider();
+    }
+  }
+
+  var pushSlide = function (buttonIndex) {
+    sliderPadeItems[lastSlideIndex].classList.remove('new__slider-item--active');
+    for (var i = 0; i < sliderItems.length; i++) {
+      currentSlideIndex = buttonIndex;
+      sliderItems[i].style.left = "calc(-" + (100 * currentSlideIndex) + percentSymbol + (sliderGap * currentSlideIndex) + "px)";
+    }
+    sliderPadeItems[currentSlideIndex].classList.add('new__slider-item--active');
+    lastSlideIndex = currentSlideIndex;
+  }
+
+  var changeSlideOnPressPage = function (index) {
+    sliderPadeItems[index].addEventListener('click', function () {
+      pushSlide(index);
+    });
+  }
+
+  var sliderPageButtons = function () {
+    for (var i = 0; i < slidesCount; i++) {
+      changeSlideOnPressPage(i);
+    }
+  }
+
+  var toNextSlide = function () {
+    currentSlideIndex = currentSlideIndex + 1;
+    if (currentSlideIndex === slidesCount) {
+      currentSlideIndex = slidesCount -1;
+    }
+    pushSlide(currentSlideIndex);
+  }
+
+  var toPreviousSlide = function () {
+    currentSlideIndex = currentSlideIndex - 1;
+    if (currentSlideIndex === -1) {
+      currentSlideIndex = 0;
+    }
+    pushSlide(currentSlideIndex);
+  }
+
+  var swipeSlider = function () {
+    swipeRange = 50;
+
+    slider.addEventListener("touchstart", function (evt) {
+      startPos = evt.touches[0].clientX;
+      document.addEventListener("touchmove", touchMove);
+    });
+
+    var touchMove = function (moveEvt) {
+      var movePos = moveEvt.touches[0].clientX;
+
+      if (movePos - startPos > swipeRange) {
+        toPreviousSlide();
+        sliderPageNumber();
+        document.removeEventListener("touchmove", touchMove);
+      }
+
+      if (startPos - movePos > swipeRange) {
+        toNextSlide();
+        sliderPageNumber();
+        document.removeEventListener("touchmove", touchMove);
+      }
+    }
+  }
+
+  var sliderPageNumber = function () {
+    pageNumber = currentSlideIndex + 1
+    mobilePageSliderCounter.innerHTML = pageNumber;
+  }
+
+  enableSlider();
+
 }());
