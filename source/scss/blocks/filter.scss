@@ -1,3 +1,7 @@
+.filter {
+  max-height: 100vh;
+}
+
 .filter form {
   width: 250px;
 }
@@ -96,7 +100,7 @@
 }
 
 .filter__item input:focus + label {
-  color: fade-out($black , 0.5);
+  color: fade-out($black, 0.5);
   outline: 1px solid black;
 }
 
@@ -109,7 +113,7 @@
 }
 
 .filter__item label:hover {
-  color: fade-out($black , 0.4);
+  color: fade-out($black, 0.4);
 
   &::before {
     border: 1px solid $coffee;
@@ -120,15 +124,11 @@
   background-color: $coffee;
 }
 
-.filter__item input:focus:checked + label::before {
-  background-color: $coffee;
-}
-
 .filter__button button {
   min-height: 68px;
   width: 100%;
   border: 1px solid $ginger;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
@@ -178,13 +178,9 @@
 
   .filter__open-button {
     display: block;
-  }
-
-  .filter__open-button {
-    display: block;
     width: 100%;
     min-height: 68px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
@@ -196,7 +192,7 @@
 
   .filter--opened form {
     display: block;
-    box-shadow: 0px 5px 32px rgba(219, 213, 208, 0.24);
+    box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
     width: 423px;
     margin-top: 27px;
     position: relative;
@@ -205,12 +201,13 @@
   .filter--opened .filter__form-container {
     width: 100%;
     min-height: 957px;
+    max-height: 100vh;
+    overflow-y: scroll;
     background-color: $white;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 15;
-    background-color: $white;
   }
 
   .filter__block {
@@ -299,7 +296,7 @@
     display: block;
   }
 
-  .filter--no-js .filter__form-container{
+  .filter--no-js .filter__form-container {
     position: static;
   }
 

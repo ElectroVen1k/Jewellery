@@ -19,7 +19,7 @@
 
 .price__input label {
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: $black;
@@ -32,7 +32,7 @@
 .price__input input {
   border: none;
   width: 45px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: $black;
@@ -40,7 +40,7 @@
 
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+    display: none;
     margin: 0;
   }
 
@@ -69,7 +69,7 @@
 .price__all-price-range {
   height: 1px;
   width: 200px;
-  background-color: #F0EAE4;
+  background-color: #f0eae4;
   position: absolute;
   top: 70px;
 }
@@ -101,7 +101,7 @@
   left: 174px;
 }
 
-.price__toggler:hover ,
+.price__toggler:hover,
 .price__toggler:focus {
   background-color: $coffee;
 }

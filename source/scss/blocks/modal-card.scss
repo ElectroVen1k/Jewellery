@@ -8,7 +8,7 @@
   background-color: $white;
   z-index: 25;
   padding: 0 35px 55px;
-  box-shadow: 0px 4px 32px rgba(121, 121, 121, 0.24);
+  box-shadow: 0 4px 32px rgba(121, 121, 121, 0.24);
   display: none;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .modal-card h4 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 26px;
   line-height: 34px;
   font-weight: 700;
@@ -40,7 +40,7 @@
 }
 
 .modal-card__added-item p {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
@@ -85,7 +85,7 @@
     background-color: $grey;
     position: absolute;
     top: 6px;
-    left: 0px;
+    left: 0;
   }
 
   &::after {
@@ -104,7 +104,7 @@
     background-color: $grey;
     position: absolute;
     top: 6px;
-    left: 0px;
+    left: 0;
   }
 }
 
@@ -129,7 +129,7 @@
     content: "";
     width: 500px;
     height: 1px;
-    background-color: #F6F5F4;
+    background-color: #f6f5f4;
     position: absolute;
     left: -35px;
     top: 0;

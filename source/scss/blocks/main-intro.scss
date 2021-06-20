@@ -1,5 +1,6 @@
 .main-intro {
-  background-image: url('../../img/intro-main-desktop.png');
+  background-color: $ginger;
+  background-image: url("../../img/intro-main-desktop1x.png");
   min-height: 463px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,7 +16,7 @@
   margin: 0;
   text-align: center;
   color: $white;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .main-intro p:first-child {
@@ -34,6 +35,12 @@
   max-width: 500px;
 }
 
+@media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+  .main-intro {
+    background-image: url("../../img/intro-main-desktop2x.png");
+  }
+}
+
 @media (max-width: $desktop-width) {
   .main-intro {
     margin-bottom: 70px;
@@ -43,5 +50,18 @@
 @media (max-width: $tablet-width) {
   .main-intro {
     margin-bottom: 60px;
+  }
+
+  .main-intro p:first-child {
+    font-size: 38px;
+    line-height: 49px;
+    letter-spacing: 0.03em;
+    margin-top: 2px;
+  }
+
+  .main-intro p:last-child {
+    font-size: 34px;
+    line-height: 44px;
+    margin-top: -7px;
   }
 }

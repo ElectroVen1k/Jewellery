@@ -1,0 +1,26 @@
+.index-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+  padding: 0 30px;
+}
+
+.index-page a {
+  margin-right: 30px;
+  color: $black;
+  font-size: 35px;
+  outline: 1px solid $ginger;
+  outline-offset: 10px;
+  display: block;
+  margin-bottom: 30px;
+
+  &:hover,
+  &:focus {
+    color: $grey;
+    outline: 1px solid $black;
+  }
+}

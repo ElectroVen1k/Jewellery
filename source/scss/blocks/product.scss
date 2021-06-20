@@ -7,7 +7,7 @@
   margin-bottom: 120px;
 }
 
-.product__puctures-list {
+.product__pictures-list {
   display: grid;
   grid-template-columns: auto auto;
   column-gap: 30px;
@@ -29,7 +29,7 @@
   height: 100%;
 }
 
-.product__puctures-list p {
+.product__pictures-wrapper p {
   display: none;
 }
 
@@ -44,8 +44,8 @@
 }
 
 
-.product h1 {
-  font-family: 'Cormorant Garamond', serif;
+.product h2 {
+  font-family: "Cormorant Garamond", serif;
   font-size: 34px;
   line-height: 44px;
   margin-top: -10px;
@@ -168,7 +168,7 @@
     position: absolute;
     top: 0;
     left: -14px;
-    background-color: #F6F5F4;
+    background-color: #f6f5f4;
   }
 }
 
@@ -180,7 +180,7 @@
     max-width: 770px;
   }
 
-  .product__puctures-list {
+  .product__pictures-list {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 286px 129px;
     width: 319px;
@@ -224,15 +224,19 @@
     margin-bottom: 53px;
   }
 
-  .product__puctures-list {
+  .product__pictures-list {
     display: flex;
     max-width: 290px;
     overflow: hidden;
-    margin-bottom: 50px;
     position: relative;
   }
 
-  .product__puctures-list p {
+  .product__pictures-wrapper {
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+  .product__pictures-wrapper p {
     display: block;
     position: absolute;
     bottom: 5px;

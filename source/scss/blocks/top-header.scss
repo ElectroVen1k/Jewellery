@@ -26,7 +26,7 @@
   cursor: pointer;
 
   &::placeholder {
-  font-family: "Poppins", "Arial", sans-serif;
+    font-family: "Poppins", "Arial", sans-serif;
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
@@ -145,7 +145,7 @@
     stroke: $black;
   }
 
-  .top-header__cart a:focus  {
+  .top-header__cart a:focus {
     outline: none;
   }
 
@@ -218,6 +218,9 @@
 
   .header--opened .top-header__login a {
     display: inline;
+    font-size: 18px;
+    line-height: 23px;
+    color: $white;
 
     &:focus,
     &:hover {
@@ -227,13 +230,6 @@
     &:active {
       color: $black;
     }
-  }
-
-  .header--opened .top-header__login a {
-    display: inline;
-    font-size: 18px;
-    line-height: 23px;
-    color: $white;
   }
 
   .header--no-js .top-header {
@@ -268,4 +264,3 @@
     top: 37px;
   }
 }
-

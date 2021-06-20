@@ -8,13 +8,14 @@
 }
 
 .another-products h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 34px;
   line-height: 44px;
   text-align: center;
   margin-bottom: 19px;
   color: $black;
 }
+
 .another-products a {
   font-weight: 500;
   font-size: 16px;
@@ -79,6 +80,7 @@
   text-align: center;
   width: max-content;
   color: $black;
+  max-width: 100%;
 }
 
 .another-products__description span {
@@ -86,6 +88,7 @@
   font-size: 14px;
   line-height: 18px;
   color: $black;
+  max-width: 100%;
 }
 
 .another-products__slider-button {
@@ -189,10 +192,11 @@
   .another-products__description p {
     padding-bottom: 0;
     margin-bottom: 1px;
+    max-width: 100%;
   }
 
   .another-products__slider-pages {
-    margin-top: 19px;
+    margin-top: 36px;
   }
 
   .another-products__slider-item:nth-child(n+4) {
@@ -212,7 +216,7 @@
 @media (max-width: $tablet-width) {
   .another-products {
     padding: 0 15px;
-    margin-bottom: 61px;
+    margin-bottom: 65px;
   }
 
   .another-products__list {
@@ -239,7 +243,9 @@
 
   .another-products__slider-pages--mobile {
     display: block;
-    margin-top: -7px;
+    font-size: 16px;
+    line-height: 21px;
+    margin-top: 29px;
   }
 
   .another-products__slider-pages--mobile p {
@@ -247,4 +253,3 @@
     border: none;
   }
 }
-

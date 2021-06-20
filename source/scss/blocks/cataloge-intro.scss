@@ -1,5 +1,6 @@
 .cataloge-intro {
-  background-image: url('../../img/intro-main-desktop.png');
+  background-image: url("../../img/intro-main-desktop1x.png");
+  background-color: $ginger;
   min-height: 261px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,7 +16,7 @@
   margin: 0;
   text-align: center;
   color: $white;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .cataloge-intro p:first-child {
@@ -34,6 +35,12 @@
   font-weight: 500;
 }
 
+@media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+  .cataloge-intro {
+    background-image: url("../../img/intro-main-desktop2x.png");
+  }
+}
+
 @media (max-width: $desktop-width) {
   .cataloge-intro {
     margin-bottom: 50px;
@@ -46,6 +53,6 @@
   }
 
   .cataloge-intro p:last-child {
-    padding:  0 25px;
+    padding: 0 25px;
   }
 }

@@ -8,7 +8,7 @@
   min-height: 586px;
   z-index: 30;
   background-color: #f0eae4;
-  background-image: url('../../img/sweet-ice-cream-photography1x.jpg');
+  background-image: url("../../img/sweet-ice-cream-photography1x.jpg");
   background-repeat: no-repeat;
   background-size: 442px 138px;
   background-position: top center;
@@ -21,7 +21,7 @@
 }
 
 .login-popup h4 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 34px;
   line-height: 44px;
   font-weight: 700;
@@ -158,7 +158,7 @@
   }
 }
 
-.login-popup__link {
+.login-popup-link {
   position: static;
   margin: 20px auto;
   z-index: 30;
@@ -167,7 +167,7 @@
   cursor: pointer;
 }
 
-.login-popup__link svg {
+.login-popup-link svg {
   position: relative;
   fill: $ginger;
   left: 50%;
@@ -175,7 +175,7 @@
 }
 
 
-.login-popup__link a {
+.login-popup-link a {
   color: $black;
 
   &:hover,
@@ -188,6 +188,12 @@
   position: static;
   transform: none;
   margin-bottom: 30px;
+}
+
+@media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+  .login-popup {
+    background-image: url("../../img/sweet-ice-cream-photography2x.jpg");
+  }
 }
 
 @media (max-width: $desktop-width) {

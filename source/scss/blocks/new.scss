@@ -7,13 +7,14 @@
 }
 
 .new h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 34px;
   line-height: 44px;
   text-align: center;
   margin-bottom: 24px;
   color: $black;
 }
+
 .new a {
   font-weight: 500;
   font-size: 16px;
@@ -77,6 +78,7 @@
   text-align: center;
   width: max-content;
   color: $black;
+  max-width: 100%;
 }
 
 .new__description span {
@@ -84,6 +86,7 @@
   font-size: 14px;
   line-height: 18px;
   color: $black;
+  max-width: 100%;
 }
 
 .new__slider-button {
@@ -189,7 +192,7 @@
   }
 
   .new__slider-pages {
-    margin-top: 19px;
+    margin-top: 36px;
   }
 
   .new__slider-item:nth-child(n+4) {
@@ -235,7 +238,7 @@
 
   .new__slider-pages--mobile {
     display: block;
-    margin-top: -7px;
+    margin-top: 28px;
   }
 
   .new__slider-pages--mobile p {
@@ -243,4 +246,3 @@
     border: none;
   }
 }
-

@@ -27,7 +27,7 @@
 }
 
 .questions__item:focus svg,
-.questions__item:hover svg  {
+.questions__item:hover svg {
   stroke: $coffee;
 }
 
@@ -42,7 +42,7 @@
 .questions h2 {
   text-align: center;
   color: $black;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-weight: 700;
   font-size: 34px;
   line-height: 44px;
