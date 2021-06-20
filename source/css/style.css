@@ -119,16 +119,24 @@ a {
 .body__overlay--opened {
   display: block; }
 
+.body__index-wrapper {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 20px auto;
+  display: none; }
+
 .header {
-  padding-top: 29px;
-  position: relative; }
+  position: relative;
+  padding-top: 29px; }
 
 .header__logo {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
   margin: 0 auto;
-  top: 30px; }
+  top: 30px;
+  z-index: 11; }
 
 .header__logo svg {
   fill: #a87b62; }
@@ -144,13 +152,16 @@ a {
   .header {
     padding-top: 44px;
     margin-bottom: 72px; }
+  .header--opened {
+    padding-top: 0; }
   .header__logo {
     z-index: 10; }
   .header--opened .header__logo svg {
     fill: #ffffff; }
   .header--opened {
     position: absolute;
-    width: 100%; }
+    width: 100%;
+    padding-top: 0; }
   .header__menu-toggler {
     display: block;
     position: absolute;
@@ -170,12 +181,19 @@ a {
     stroke: #ffffff; }
   .header--no-js {
     position: relative;
-    margin-bottom: -44px; } }
+    margin-bottom: -44px; }
+  .header--opened .header__wrapper {
+    position: relative;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: scroll; } }
 
 @media (max-width: 767px) {
   .header {
     padding-top: 35px;
     margin-bottom: 55px; }
+  .header--opened {
+    padding-top: 0; }
   .header__logo {
     top: 20px; }
   .header__logo svg {
@@ -333,13 +351,13 @@ a {
   .header--opened .top-header {
     position: absolute;
     width: 100%;
-    min-height: 778px;
     background-color: #a87b62;
     top: 0;
     padding-top: 0;
     flex-direction: column;
     z-index: 9;
-    overflow: scroll; }
+    overflow: scroll;
+    min-height: 778px; }
   .header--opened .top-header__actions {
     order: 2;
     justify-content: flex-start; }
@@ -384,8 +402,7 @@ a {
     line-height: 23px;
     color: #ffffff; }
   .header--no-js .top-header {
-    position: relative;
-    top: -44px; } }
+    position: relative; } }
 
 @media (max-width: 767px) {
   .top-header {
@@ -401,9 +418,7 @@ a {
     margin-top: 12px;
     margin-bottom: 25px; }
   .header--opened .top-header__cart {
-    top: 37px; }
-  .header--no-js .top-header {
-    top: -35px; } }
+    top: 37px; } }
 
 .main-nav {
   width: 100%;
@@ -1994,15 +2009,12 @@ a {
     bottom: 0; }
 
 .product__additical-info dt {
-  float: left;
   margin-right: auto;
-  width: 50%;
   font-weight: 500;
   padding-bottom: 10px;
   display: block; }
 
 .product__additical-info dd {
-  width: 100%;
   text-align: right;
   margin-left: auto;
   position: relative;
@@ -2172,7 +2184,10 @@ a {
 
 .another-products__item {
   width: calc(25% - 22.5px);
-  flex-shrink: 0; }
+  flex-shrink: 0;
+  position: relative;
+  left: 0;
+  transition: all 0.3s ease-out; }
 
 .another-products__item img {
   -o-object-fit: cover;
@@ -2276,10 +2291,7 @@ a {
     padding-bottom: 4px; }
   .another-products__list {
     margin: 0 auto;
-    margin-top: 50px;
-    overflow-x: scroll; }
-    .another-products__list::-webkit-scrollbar {
-      color: transparent; }
+    margin-top: 50px; }
   .another-products__item {
     width: calc(50% - 15px); }
   .another-products__item img {
@@ -2321,10 +2333,10 @@ a {
     border: none; } }
 
 .modal-card {
-  position: absolute;
-  top: 372px;
+  position: fixed;
+  top: 50vh;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   width: 500px;
   min-height: 439px;
   background-color: #ffffff;
@@ -2458,10 +2470,14 @@ a {
   align-items: center;
   border: 1px solid #a87b62;
   color: #1d1613; }
+  .modal-card__action a:focus, .modal-card__action a:hover {
+    background-color: rgba(29, 22, 19, 0.1); }
 
 .modal-card__action a:last-child {
   color: #ffffff;
   background-color: #a87b62; }
+  .modal-card__action a:last-child:focus, .modal-card__action a:last-child:hover {
+    background-color: #7a5c4b; }
 
 .modal-card__close {
   position: absolute;
@@ -2470,7 +2486,8 @@ a {
   top: 20px;
   right: 20px;
   border: none;
-  background-color: transparent; }
+  background-color: transparent;
+  cursor: pointer; }
   .modal-card__close::after, .modal-card__close::before {
     content: "";
     width: 18px;
@@ -2483,6 +2500,11 @@ a {
     transform: rotate(45deg); }
   .modal-card__close::before {
     transform: rotate(-45deg); }
+
+.modal-card__close:focus::after, .modal-card__close:focus::before,
+.modal-card__close:hover::after,
+.modal-card__close:hover::before {
+  background-color: rgba(29, 22, 19, 0.5); }
 
 @media (max-width: 1023px) {
   .modal-card {
@@ -2562,7 +2584,11 @@ a {
   background-repeat: no-repeat;
   background-size: 442px 138px;
   background-position: top center;
-  padding: 138px 45px 0; }
+  padding: 138px 45px 0;
+  display: none; }
+
+.login-popup--opened {
+  display: block; }
 
 .login-popup h4 {
   font-family: 'Cormorant Garamond', serif;
@@ -2586,7 +2612,8 @@ a {
   border-bottom: 1px solid #1d1613;
   padding-bottom: 8px;
   padding-left: 0;
-  margin-bottom: 31px; }
+  margin-bottom: 31px;
+  cursor: pointer; }
   .login-popup input::-moz-placeholder {
     font-size: 14px;
     line-height: 21px;
@@ -2597,6 +2624,13 @@ a {
     line-height: 21px;
     font-weight: 500;
     color: #1d1613; }
+
+.login-popup input:hover::-moz-placeholder, .login-popup input:focus::-moz-placeholder {
+  color: #9b9997; }
+
+.login-popup input:hover::placeholder,
+.login-popup input:focus::placeholder {
+  color: #9b9997; }
 
 .login-popup input:last-of-type {
   margin-bottom: 5px; }
@@ -2612,6 +2646,8 @@ a {
   font-size: 12px;
   line-height: 18px;
   font-weight: 500; }
+  .login-popup form a:focus, .login-popup form a:hover {
+    color: #1d1613; }
 
 .login-popup form button {
   width: 100%;
@@ -2622,7 +2658,10 @@ a {
   font-size: 16px;
   line-height: 21px;
   border: none;
-  margin-top: 45px; }
+  margin-top: 45px;
+  cursor: pointer; }
+  .login-popup form button:focus, .login-popup form button:hover {
+    background-color: #7a5c4b; }
 
 .login-popup p {
   margin: 0;
@@ -2636,6 +2675,8 @@ a {
 
 .login-popup a {
   color: #1d1613; }
+  .login-popup a:focus, .login-popup a:hover {
+    color: rgba(29, 22, 19, 0.7); }
 
 .login-popup__close {
   position: absolute;
@@ -2644,7 +2685,8 @@ a {
   top: 20px;
   right: 20px;
   border: none;
-  background-color: transparent; }
+  background-color: transparent;
+  cursor: pointer; }
   .login-popup__close::after, .login-popup__close::before {
     content: "";
     width: 18px;
@@ -2657,6 +2699,37 @@ a {
     transform: rotate(45deg); }
   .login-popup__close::before {
     transform: rotate(-45deg); }
+
+.login-popup__close:focus::after, .login-popup__close:focus::before,
+.login-popup__close:hover::after,
+.login-popup__close:hover::before {
+  background-color: rgba(29, 22, 19, 0.5); }
+
+.login-popup__link {
+  position: static;
+  margin: 20px auto;
+  z-index: 30;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 250px;
+  cursor: pointer; }
+
+.login-popup__link svg {
+  position: relative;
+  fill: #a87b62;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.login-popup__link a {
+  color: #1d1613; }
+  .login-popup__link a:hover, .login-popup__link a:focus {
+    color: #9b9997; }
+
+.login-popup--page {
+  position: static;
+  transform: none;
+  margin-bottom: 30px; }
 
 @media (max-width: 1023px) {
   .login-popup {

@@ -13,6 +13,11 @@
   background-size: 442px 138px;
   background-position: top center;
   padding: 138px 45px 0;
+  display: none;
+}
+
+.login-popup--opened {
+  display: block;
 }
 
 .login-popup h4 {
@@ -39,6 +44,7 @@
   padding-bottom: 8px;
   padding-left: 0;
   margin-bottom: 31px;
+  cursor: pointer;
 
   &::placeholder {
     font-size: 14px;
@@ -47,6 +53,14 @@
     color: $black;
   }
 }
+
+.login-popup input:hover,
+.login-popup input:focus {
+  &::placeholder {
+    color: $grey;
+  }
+}
+
 
 .login-popup input:last-of-type {
   margin-bottom: 5px;
@@ -61,6 +75,11 @@
   font-size: 12px;
   line-height: 18px;
   font-weight: 500;
+
+  &:focus,
+  &:hover {
+    color: $black;
+  }
 }
 
 .login-popup form button {
@@ -73,6 +92,12 @@
   line-height: 21px;
   border: none;
   margin-top: 45px;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    background-color: $coffee;
+  }
 }
 
 .login-popup p {
@@ -88,6 +113,11 @@
 
 .login-popup a {
   color: $black;
+
+  &:focus,
+  &:hover {
+    color: fade-out($black, 0.3);
+  }
 }
 
 .login-popup__close {
@@ -98,6 +128,7 @@
   right: 20px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 
   &::after,
   &::before {
@@ -117,6 +148,46 @@
   &::before {
     transform: rotate(-45deg);
   }
+}
+
+.login-popup__close:focus,
+.login-popup__close:hover {
+  &::after,
+  &::before {
+    background-color: fade-out($black, 0.5);
+  }
+}
+
+.login-popup__link {
+  position: static;
+  margin: 20px auto;
+  z-index: 30;
+  width: max-content;
+  max-width: 250px;
+  cursor: pointer;
+}
+
+.login-popup__link svg {
+  position: relative;
+  fill: $ginger;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.login-popup__link a {
+  color: $black;
+
+  &:hover,
+  &:focus {
+    color: $grey;
+  }
+}
+
+.login-popup--page {
+  position: static;
+  transform: none;
+  margin-bottom: 30px;
 }
 
 @media (max-width: $desktop-width) {

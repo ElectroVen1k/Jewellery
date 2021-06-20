@@ -160,13 +160,13 @@
   .header--opened .top-header {
     position: absolute;
     width: 100%;
-    min-height: 778px;
     background-color: $ginger;
     top: 0;
     padding-top: 0;
     flex-direction: column;
     z-index: 9;
     overflow: scroll;
+    min-height: 778px;
   }
 
   .header--opened .top-header__actions {
@@ -238,7 +238,6 @@
 
   .header--no-js .top-header {
     position: relative;
-    top: -44px;
   }
 }
 
@@ -267,10 +266,6 @@
 
   .header--opened .top-header__cart {
     top: 37px;
-  }
-
-  .header--no-js .top-header {
-    top: -35px;
   }
 }
 

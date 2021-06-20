@@ -49,6 +49,9 @@
 .another-products__item {
   width: calc(25% - 22.5px);
   flex-shrink: 0;
+  position: relative;
+  left: 0;
+  transition: all 0.3s ease-out;
 }
 
 .another-products__item img {
@@ -173,11 +176,6 @@
   .another-products__list {
     margin: 0 auto;
     margin-top: 50px;
-    overflow-x: scroll;
-
-    &::-webkit-scrollbar {
-      color: transparent;
-    }
   }
 
   .another-products__item {

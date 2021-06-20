@@ -1,8 +1,8 @@
 .modal-card {
-  position: absolute;
-  top: 372px;
+  position: fixed;
+  top: 50vh;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   width: 500px;
   min-height: 439px;
   background-color: $white;
@@ -162,11 +162,21 @@
   align-items: center;
   border: 1px solid $ginger;
   color: $black;
+
+  &:focus,
+  &:hover {
+    background-color: fade-out($black, 0.9);
+  }
 }
 
 .modal-card__action a:last-child {
   color: $white;
   background-color: $ginger;
+
+  &:focus,
+  &:hover {
+    background-color: $coffee;
+  }
 }
 
 .modal-card__close {
@@ -177,6 +187,7 @@
   right: 20px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 
   &::after,
   &::before {
@@ -195,6 +206,14 @@
 
   &::before {
     transform: rotate(-45deg);
+  }
+}
+
+.modal-card__close:focus,
+.modal-card__close:hover {
+  &::after,
+  &::before {
+    background-color: fade-out($black, 0.5);
   }
 }
 
