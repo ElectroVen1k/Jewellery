@@ -491,7 +491,7 @@ a {
 
 .main-intro {
   background-color: #a87b62;
-  background-image: url("../../img/intro-main-desktop1x.png");
+  background-image: url("../img/intro-main-desktop1x.png");
   min-height: 463px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -524,7 +524,7 @@ a {
 
 @media (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
   .main-intro {
-    background-image: url("../../img/intro-main-desktop2x.png"); } }
+    background-image: url("../img/intro-main-desktop2x.png"); } }
 
 @media (max-width: 1023px) {
   .main-intro {
@@ -1348,7 +1348,7 @@ a {
     display: none; } }
 
 .cataloge-intro {
-  background-image: url("../../img/intro-main-desktop1x.png");
+  background-image: url("../img/intro-main-desktop1x.png");
   background-color: #a87b62;
   min-height: 261px;
   background-repeat: no-repeat;
@@ -1382,7 +1382,7 @@ a {
 
 @media (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
   .cataloge-intro {
-    background-image: url("../../img/intro-main-desktop2x.png"); } }
+    background-image: url("../img/intro-main-desktop2x.png"); } }
 
 @media (max-width: 1023px) {
   .cataloge-intro {
@@ -2610,7 +2610,7 @@ a {
   min-height: 586px;
   z-index: 30;
   background-color: #f0eae4;
-  background-image: url("../../img/sweet-ice-cream-photography1x.jpg");
+  background-image: url("../img/sweet-ice-cream-photography1x.jpg");
   background-repeat: no-repeat;
   background-size: 442px 138px;
   background-position: top center;
@@ -2763,7 +2763,7 @@ a {
 
 @media (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
   .login-popup {
-    background-image: url("../../img/sweet-ice-cream-photography2x.jpg"); } }
+    background-image: url("../img/sweet-ice-cream-photography2x.jpg"); } }
 
 @media (max-width: 1023px) {
   .login-popup {

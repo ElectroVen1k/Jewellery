@@ -1,5 +1,5 @@
 .cataloge-intro {
-  background-image: url("../../img/intro-main-desktop1x.png");
+  background-image: url("../img/intro-main-desktop1x.png");
   background-color: $ginger;
   min-height: 261px;
   background-repeat: no-repeat;
@@ -37,7 +37,7 @@
 
 @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
   .cataloge-intro {
-    background-image: url("../../img/intro-main-desktop2x.png");
+    background-image: url("../img/intro-main-desktop2x.png");
   }
 }
 

@@ -1,6 +1,6 @@
 .main-intro {
   background-color: $ginger;
-  background-image: url("../../img/intro-main-desktop1x.png");
+  background-image: url("../img/intro-main-desktop1x.png");
   min-height: 463px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,7 +37,7 @@
 
 @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
   .main-intro {
-    background-image: url("../../img/intro-main-desktop2x.png");
+    background-image: url("../img/intro-main-desktop2x.png");
   }
 }
 
