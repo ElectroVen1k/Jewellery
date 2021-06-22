@@ -1654,7 +1654,8 @@ a {
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
-  cursor: pointer; }
+  cursor: pointer;
+  border-radius: 0; }
 
 .filter__button--apply button {
   margin-top: 35px;
@@ -1694,6 +1695,7 @@ a {
     color: #ffffff;
     background-color: #a87b62;
     border: none;
+    border-radius: 0;
     margin-bottom: 50px; }
   .filter--opened form {
     display: block;
@@ -2049,6 +2051,7 @@ a {
   height: 68px;
   padding: 0;
   border: none;
+  border-radius: 0;
   background-color: #a87b62;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -2538,7 +2541,6 @@ a {
 
 @media (max-width: 1023px) {
   .modal-card {
-    top: 258px;
     width: 502px;
     padding: 0 30px 55px; }
   .modal-card__added-item img {
@@ -2556,8 +2558,7 @@ a {
 @media (max-width: 767px) {
   .modal-card {
     width: 290px;
-    padding: 0 15px 25px;
-    top: 117px; }
+    padding: 0 15px 25px; }
   .modal-card h4 {
     margin: 0 30px;
     margin-top: 38px;
@@ -2689,7 +2690,8 @@ a {
   line-height: 21px;
   border: none;
   margin-top: 45px;
-  cursor: pointer; }
+  cursor: pointer;
+  border-radius: 0; }
   .login-popup form button:focus, .login-popup form button:hover {
     background-color: #7a5c4b; }
 
