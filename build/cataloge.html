@@ -59,6 +59,7 @@
       </symbol>
     </svg>
     <header class="header header--opened header--no-js">
+      <h1 class="visually-hidden">Cataloge</h1>
       <div class="header__wrapper">
         <div class="header__logo">
           <a href="main.html" aria-label="Logo, back to main page">
@@ -237,6 +238,7 @@
           </div>
         </article>
         <div class="cataloge__container">
+          <h2 class="visually-hidden">Cataloge List</h2>
           <ul class="cataloge__list">
             <li class="cataloge__item">
               <!-- 1х: 270px; 2x: 540px -->
@@ -400,8 +402,8 @@
         <div class="mailing">
           <h3>The good stuff in your inbox </h3>
           <p>News and updates from CH. No spam, we promise.</p>
-          <form action="post" class="mailing__form">
-            <input type="text" placeholder="Your E-mail" id="e-mail">
+          <form action="https://echo.htmlacademy.ru/" method="post" class="mailing__form">
+            <input type="email" placeholder="Your E-mail" id="e-mail" name="email" required>
             <label for="e-mail" class="visually-hidden">E-mail</label>
             <button type="submit">Sign Up
               <svg width="30" height="11" viewBox="0 0 30 11">
@@ -477,9 +479,9 @@
     <div class="login-popup">
       <h4>Log In</h4>
       <form method="post" action="https://echo.htmlacademy.ru/">
-        <input id="email" type="email" name="E-mail" placeholder="Your E-mail">
+        <input id="email" type="email" name="E-mail" placeholder="Your E-mail" required>
         <label for="email" class="visually-hidden"></label>
-        <input id="password" type="password" name="password" placeholder="Password">
+        <input id="password" type="password" name="password" placeholder="Password" required>
         <label for="password" class="visually-hidden"></label>
         <a href="#">Forgot your password?</a>
         <button type="submit">Log In</button>

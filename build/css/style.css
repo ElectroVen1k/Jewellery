@@ -184,6 +184,7 @@ a {
     position: relative;
     height: 100vh;
     max-height: 100vh;
+    min-height: 100vh;
     overflow-y: scroll; } }
 
 @media (max-width: 767px) {
@@ -355,7 +356,8 @@ a {
     flex-direction: column;
     z-index: 9;
     overflow: scroll;
-    min-height: 778px; }
+    min-height: 778px;
+    height: 100vh; }
   .header--opened .top-header__actions {
     order: 2;
     justify-content: flex-start; }
@@ -722,7 +724,8 @@ a {
   font-size: 14px;
   line-height: 21px;
   padding-left: 0;
-  font-family: "Poppins", "Arial", sans-serif; }
+  font-family: "Poppins", "Arial", sans-serif;
+  border-radius: 0; }
   .mailing__form input::-moz-placeholder {
     color: #9b9997;
     font-weight: 500;
@@ -838,7 +841,7 @@ a {
 .new__item img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 284px;
+  height: auto;
   width: 100%;
   display: block; }
 
@@ -930,7 +933,6 @@ a {
 
 @media (max-width: 1023px) {
   .new {
-    max-width: 768px;
     margin: 0 auto; }
   .new h2 {
     margin-bottom: 19px; }
@@ -942,7 +944,7 @@ a {
   .new__item {
     width: calc(50% - 15px); }
   .new__item img {
-    height: 340px; }
+    height: auto; }
   .new__description p {
     padding-bottom: 0;
     margin-bottom: 1px; }
@@ -960,12 +962,11 @@ a {
   .new {
     padding: 0 15px; }
   .new__list {
-    margin-top: 40px;
-    max-width: 350px; }
+    margin-top: 40px; }
   .new__slider-button {
     display: none; }
   .new__item img {
-    height: 136px; }
+    height: auto; }
   .new__description p {
     width: auto;
     margin-top: 16px; }
@@ -1054,7 +1055,7 @@ a {
   margin-bottom: 13px;
   margin-top: 67px; }
 
-.blog__text h4 {
+.blog__text h3 {
   color: black;
   font-family: "Cormorant Garamond", serif;
   font-weight: 600;
@@ -1305,18 +1306,22 @@ a {
   grid-template-columns: 19.66% 34.11% 19.66% 19.66%;
   -moz-column-gap: 27px;
        column-gap: 27px;
-  grid-template-rows: 230px 150px;
+  grid-template-rows: auto auto;
   row-gap: 34px; }
 
 .our-pictures__item img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 100%; }
+  height: auto;
+  display: block; }
 
 .our-pictures__item--important {
   grid-column: 2/3;
   grid-row: 1/3; }
+
+.our-pictures__item--important img {
+  height: 100%; }
 
 @media (max-width: 1023px) {
   .our-pictures {
@@ -1328,8 +1333,7 @@ a {
     -moz-column-gap: 16px;
          column-gap: 16px;
     row-gap: 20px;
-    grid-template-rows: 133px 87px;
-    max-width: 678px; } }
+    grid-template-rows: auto auto; } }
 
 @media (max-width: 767px) {
   .our-pictures {
@@ -1338,12 +1342,11 @@ a {
     padding: 0 15px; }
   .our-pictures__list {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 133px 87px 87px;
+    grid-template-rows: auto auto auto;
     -moz-column-gap: 24px;
          column-gap: 24px;
     row-gap: 27px;
-    margin-top: 46px;
-    max-width: 300px; }
+    margin-top: 46px; }
   .our-pictures__item--unimportant {
     display: none; } }
 
@@ -1421,7 +1424,7 @@ a {
 
 .cataloge__item img {
   display: block;
-  height: 272px; }
+  height: auto; }
 
 .cataloge__item-description {
   text-align: center; }
@@ -1508,13 +1511,13 @@ a {
 @media (max-width: 1023px) {
   .cataloge__wrapper {
     flex-wrap: wrap;
-    margin-bottom: 27px; }
+    margin-bottom: 36px; }
   .cataloge__container {
     margin: 0 auto; }
   .cataloge__list {
     margin: 0 auto; }
   .cataloge__item img {
-    height: 208px; }
+    height: auto; }
   .cataloge__navitagion {
     margin-left: 0;
     margin-top: 32px; } }
@@ -1525,11 +1528,10 @@ a {
   .cataloge__list {
     grid-template-columns: 1fr 1fr;
     row-gap: 23px; }
-  .cataloge__item {
-    width: 130px; }
   .cataloge__item img {
     width: 100%;
-    height: 136px; }
+    height: auto;
+    min-height: 136px; }
   .cataloge__item-description p {
     width: auto;
     margin-top: 16px; }
@@ -1981,7 +1983,7 @@ a {
   max-width: 370px;
   margin: 0 auto; }
 
-.product h2 {
+.product h1 {
   font-family: "Cormorant Garamond", serif;
   font-size: 34px;
   line-height: 44px;
@@ -2091,8 +2093,9 @@ a {
   .product {
     margin: 0 auto;
     margin-top: 30px;
-    margin-bottom: 70px;
-    max-width: 770px; }
+    margin-bottom: 70px; }
+  .product__pictures-item img {
+    width: 100%; }
   .product__pictures-list {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 286px 129px;
@@ -2105,11 +2108,12 @@ a {
     grid-column: 1/4;
     grid-row: 1/2; }
   .product__info {
-    max-width: 319px;
     margin: 0;
-    margin-left: 20px; }
+    margin-left: 20px;
+    max-width: none; }
   .product__info-wrapper {
-    margin: 0; }
+    margin: 0;
+    max-width: none; }
   .product__purchase-terms {
     margin-left: 0; }
   .product__purchase-terms p {
@@ -2122,13 +2126,13 @@ a {
     overflow: hidden;
     padding: 0 15px;
     margin: 0 auto;
-    max-width: 320px;
     margin-bottom: 53px; }
   .product__pictures-list {
     display: flex;
-    max-width: 290px;
     overflow: hidden;
-    position: relative; }
+    position: relative;
+    margin-right: 0;
+    width: 100%; }
   .product__pictures-wrapper {
     position: relative;
     margin-bottom: 50px; }
@@ -2143,15 +2147,23 @@ a {
     line-height: 18px;
     font-weight: 500; }
   .product__pictures-item {
-    width: 290px;
-    height: 260px;
+    height: auto;
     -o-object-fit: cover;
        object-fit: cover;
     flex-shrink: 0; }
-  .product__pictures-item img {
+  .product__pictures-item--primary {
     width: 100%; }
+  .product__pictures-item img {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    max-width: 500px;
+    margin: 0 auto; }
   .product__info {
-    margin-left: 0; }
+    margin-left: 0;
+    max-width: none; }
+  .product__info-wrapper {
+    max-width: none; }
   .product__info-sections {
     margin-top: 25px; }
   .product span {
@@ -2220,7 +2232,7 @@ a {
 .another-products__item img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 284px;
+  height: auto;
   width: 100%;
   display: block; }
 
@@ -2312,7 +2324,6 @@ a {
 
 @media (max-width: 1023px) {
   .another-products {
-    max-width: 768px;
     margin: 0 auto;
     margin-bottom: 72px; }
   .another-products h2 {
@@ -2325,7 +2336,7 @@ a {
   .another-products__item {
     width: calc(50% - 15px); }
   .another-products__item img {
-    height: 340px; }
+    height: auto; }
   .another-products__description p {
     padding-bottom: 0;
     margin-bottom: 1px;
@@ -2345,12 +2356,11 @@ a {
     padding: 0 15px;
     margin-bottom: 65px; }
   .another-products__list {
-    margin-top: 40px;
-    max-width: 350px; }
+    margin-top: 40px; }
   .another-products__slider-button {
     display: none; }
   .another-products__item img {
-    height: 136px; }
+    height: auto; }
   .another-products__description p {
     width: auto;
     margin-top: 16px; }
@@ -2514,10 +2524,10 @@ a {
 
 .modal-card__close {
   position: absolute;
-  width: 15px;
-  height: 15px;
-  top: 20px;
-  right: 20px;
+  width: 25px;
+  height: 25px;
+  top: 15px;
+  right: 15px;
   border: none;
   background-color: transparent;
   cursor: pointer; }
@@ -2527,8 +2537,8 @@ a {
     height: 2px;
     background-color: #1d1613;
     position: absolute;
-    top: 6px;
-    left: -1px; }
+    top: 11px;
+    left: 3px; }
   .modal-card__close::after {
     transform: rotate(45deg); }
   .modal-card__close::before {
@@ -2598,8 +2608,8 @@ a {
     width: 100%;
     margin-bottom: 20px; }
   .modal-card__close {
-    top: 15px;
-    right: 15px; } }
+    top: 10px;
+    right: 10px; } }
 
 .login-popup {
   position: fixed;
@@ -2644,7 +2654,8 @@ a {
   padding-bottom: 8px;
   padding-left: 0;
   margin-bottom: 31px;
-  cursor: pointer; }
+  cursor: pointer;
+  border-radius: 0; }
   .login-popup input::-moz-placeholder {
     font-size: 14px;
     line-height: 21px;
@@ -2712,10 +2723,10 @@ a {
 
 .login-popup__close {
   position: absolute;
-  width: 15px;
-  height: 15px;
-  top: 20px;
-  right: 20px;
+  width: 25px;
+  height: 25px;
+  top: 15px;
+  right: 15px;
   border: none;
   background-color: transparent;
   cursor: pointer; }
@@ -2725,8 +2736,8 @@ a {
     height: 2px;
     background-color: #1d1613;
     position: absolute;
-    top: 6px;
-    left: -1px; }
+    top: 11px;
+    left: 3px; }
   .login-popup__close::after {
     transform: rotate(45deg); }
   .login-popup__close::before {
@@ -2795,10 +2806,8 @@ a {
   .login-popup form button {
     margin-top: 35px; }
   .login-popup__close {
-    width: 15px;
-    height: 15px;
-    top: 15px;
-    right: 15px; }
+    top: 10px;
+    right: 10px; }
     .login-popup__close::before, .login-popup__close::after {
       width: 18px; } }
 

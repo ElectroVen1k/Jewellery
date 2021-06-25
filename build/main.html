@@ -55,6 +55,7 @@
       </symbol>
     </svg>
     <header class="header header--opened header--no-js">
+      <h1 class="visually-hidden">Jewellery</h1>
       <div class="header__wrapper">
         <div class="header__logo">
           <a aria-label="Logo">
@@ -312,7 +313,7 @@
             </picture>
             <div class="blog__text">
               <p>September 30, 2019</p>
-              <h4>How to care for your jewellery</h4>
+              <h3>How to care for your jewellery</h3>
               <a href="#">Read Article</a>
             </div>
           </li>
@@ -324,7 +325,7 @@
             </picture>
             <div class="blog__text">
               <p>September 23, 2019</p>
-              <h4>Power of crystals</h4>
+              <h3>Power of crystals</h3>
               <a href="#">Read Article</a>
             </div>
           </li>
@@ -336,7 +337,7 @@
             </picture>
             <div class="blog__text">
               <p>September 16, 2019</p>
-              <h4>AW 19 trends</h4>
+              <h3>AW 19 trends</h3>
               <a href="#">Read Article</a>
             </div>
           </li>
@@ -436,8 +437,8 @@
         <div class="mailing">
           <h3>The good stuff in your inbox </h3>
           <p>News and updates from CH. No spam, we promise.</p>
-          <form action="post" class="mailing__form">
-            <input type="text" placeholder="Your E-mail" id="e-mail">
+          <form action="https://echo.htmlacademy.ru/" method="post" class="mailing__form">
+            <input type="email" placeholder="Your E-mail" id="e-mail" name="email" required>
             <label for="e-mail" class="visually-hidden">E-mail</label>
             <button type="submit">Sign Up
               <svg width="30" height="11" viewBox="0 0 30 11">
@@ -513,9 +514,9 @@
     <div class="login-popup">
       <h4>Log In</h4>
       <form method="post" action="https://echo.htmlacademy.ru/">
-        <input id="email" type="email" name="E-mail" placeholder="Your E-mail">
+        <input id="email" type="email" name="E-mail" placeholder="Your E-mail" required>
         <label for="email" class="visually-hidden"></label>
-        <input id="password" type="password" name="password" placeholder="Password">
+        <input id="password" type="password" name="password" placeholder="Password" required>
         <label for="password" class="visually-hidden"></label>
         <a href="#">Forgot your password?</a>
         <button type="submit">Log In</button>

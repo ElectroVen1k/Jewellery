@@ -57,7 +57,7 @@
 
 .another-products__item img {
   object-fit: cover;
-  height: 284px;
+  height: auto;
   width: 100%;
   display: block;
 }
@@ -163,7 +163,6 @@
 
 @media (max-width: $desktop-width) {
   .another-products {
-    max-width: 768px;
     margin: 0 auto;
     margin-bottom: 72px;
   }
@@ -186,7 +185,7 @@
   }
 
   .another-products__item img {
-    height: 340px;
+    height: auto;
   }
 
   .another-products__description p {
@@ -221,7 +220,6 @@
 
   .another-products__list {
     margin-top: 40px;
-    max-width: 350px;
   }
 
   .another-products__slider-button {
@@ -229,7 +227,7 @@
   }
 
   .another-products__item img {
-    height: 136px;
+    height: auto;
   }
 
   .another-products__description p {

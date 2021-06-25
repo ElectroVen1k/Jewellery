@@ -44,7 +44,7 @@
 }
 
 
-.product h2 {
+.product h1 {
   font-family: "Cormorant Garamond", serif;
   font-size: 34px;
   line-height: 44px;
@@ -178,7 +178,10 @@
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 70px;
-    max-width: 770px;
+  }
+
+  .product__pictures-item img {
+    width: 100%;
   }
 
   .product__pictures-list {
@@ -196,13 +199,14 @@
   }
 
   .product__info {
-    max-width: 319px;
     margin: 0;
     margin-left: 20px;
+    max-width: none;
   }
 
   .product__info-wrapper {
     margin: 0;
+    max-width: none;
   }
 
   .product__purchase-terms {
@@ -221,15 +225,15 @@
     overflow: hidden;
     padding: 0 15px;
     margin: 0 auto;
-    max-width: 320px;
     margin-bottom: 53px;
   }
 
   .product__pictures-list {
     display: flex;
-    max-width: 290px;
     overflow: hidden;
     position: relative;
+    margin-right: 0;
+    width: 100%;
   }
 
   .product__pictures-wrapper {
@@ -250,18 +254,29 @@
   }
 
   .product__pictures-item {
-    width: 290px;
-    height: 260px;
+    height: auto;
     object-fit: cover;
     flex-shrink: 0;
   }
 
+  .product__pictures-item--primary {
+    width: 100%;
+  }
+
   .product__pictures-item img {
     width: 100%;
+    object-fit: contain;
+    max-width: 500px;
+    margin: 0 auto;
   }
 
   .product__info {
     margin-left: 0;
+    max-width: none;
+  }
+
+  .product__info-wrapper {
+    max-width: none;
   }
 
   .product__info-sections {

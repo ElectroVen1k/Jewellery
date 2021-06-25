@@ -136,8 +136,8 @@
         <div class="mailing">
           <h3>The good stuff in your inbox </h3>
           <p>News and updates from CH. No spam, we promise.</p>
-          <form action="post" class="mailing__form">
-            <input type="text" placeholder="Your E-mail" id="e-mail">
+          <form action="https://echo.htmlacademy.ru/" method="post" class="mailing__form">
+            <input type="email" placeholder="Your E-mail" id="e-mail" name="email" required>
             <label for="e-mail" class="visually-hidden">E-mail</label>
             <button type="submit">Sign Up
               <svg width="30" height="11" viewBox="0 0 30 11">
@@ -213,9 +213,9 @@
     <div class="login-popup">
       <h4>Log In</h4>
       <form method="post" action="https://echo.htmlacademy.ru/">
-        <input id="email" type="email" name="E-mail" placeholder="Your E-mail">
+        <input id="email" type="email" name="E-mail" placeholder="Your E-mail" required>
         <label for="email" class="visually-hidden"></label>
-        <input id="password" type="password" name="password" placeholder="Password">
+        <input id="password" type="password" name="password" placeholder="Password" required>
         <label for="password" class="visually-hidden"></label>
         <a href="#">Forgot your password?</a>
         <button type="submit">Log In</button>
